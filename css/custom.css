@@ -276,3 +276,14 @@ pre {
 	display: table;
 	width: 20%;
 }
+.coverpic{
+	max-width: 50%;
+    border: none;
+    border-radius: 15px;
+    padding: 20px
+    background-color: none;
+}
+.coverpic{
+	float: left;
+    margin-right: 1em;
+}
