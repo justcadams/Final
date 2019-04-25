@@ -1,345 +1,303 @@
-<?php 
+<?php
 $currentDirectory = getcwd();
 if($currentDirectory != '/users/j/a/jadams7/www-root/cs008/final') {
-	chdir('/users/j/a/jadams7/www-root/cs008/final');
-	include 'top.php';
+    chdir('/users/j/a/jadams7/www-root/cs008/final');
+include 'top.php';
 }
-else {
-	include 'top.php';
+else{
+include 'nav.php';
 }
+//%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
+print PHP_EOL . '<!--SECTION: 1 Initialize variables -->' . PHP_EOL;
+//These variables are used in both sections 2 and 3, otherwise we would
+// declare them in the section we needed them
 
-/*############################################################################################*/
-/*############################################################################################*/
-	print PHP_EOL . '<!-- SECTION 1: Initialize Variables -->' . PHP_EOL;
-/* These variables will contain information for both sections 2 and 3. Remember to declare variables local to their scope. */
-/*############################################################################################*/
+print PHP_EOL . '<!--SECTION: 1a. debugging setup -->' . PHP_EOL;
+// We print out the post array so that we can see out forms is working.
+// Normally I wrap this in a debug statement but for now I want to always
+// display it. When you first come to the form it is empty. When you submit the 
+// for it displays the contents of the pot array.
+// if ($debug){
+//print '<p>Post Array:</p><pre>';
+//print_r($_POST);
+//print '</pre>';
 
-	print PHP_EOL . '<!--SECTION 1a: Debugging Setup -->' . PHP_EOL;
-/* Printing out the post array allows the developer to test if the form is properly working. This will eventually be wrapped in a debug statement, which will prevent the post array from printing in a normal state. For now when you submit the form it displays the contents of the post array. */
-/*############################################################################################*/
+//}
+//%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
+//
+print PHP_EOL . '<!-- SECTION: 1b form variables -->' . PHP_EOL;
+//
+// Initialize variables one for each form element
+// in the order they appear on the form
+$firstName = "";
+$lastName = "";
+$email = "";
+//%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
+print PHP_EOL . '<!-- SECTION: 1c form error flags -->' . PHP_EOL;
+//
+// Initialize Error Flags one for eac form element we validate
+// in the order they appear on the form
+$lastNameERROR = false;
+$firstNameERROR = false;
+$emailERROR = false;
+//%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
+//
+print PHP_EOL . '<!-- SECTION: 1d misc variables -->' . PHP_EOL;
+//
+// create array to hold error messages filled (if any) in 2d displayed in 3c.
+//$errorMsg = array();
+//have we mailed the information to the user, flag variabe?
+$mailed = false;
+if (isset($_POST["btnSubmit"])) {
+
+    print PHP_EOL . '<!-- SECTION: 2 Process for when the form is submitted -->' . PHP_EOL;
+// the url for this form
+    $thisURL = $domain . $phpSelf;
+    if (!securityCheck($thisURL)) {
+        $msg = '<p>Sorry you cannot access this Page.</p>';
+        $msg .= '<p>Security breach detected and reported.</p>';
+        die($msg);
+    }
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//
+    print PHP_EOL . '<!-- SECTION: 2b Sanitize (clean) data -->' . PHP_EOL;
+// remove any potentia JavaScript of html code from users input on the 
+// form. Note it is best to follow the same order as declared in section 1c.
+    
+    $lastName = htmlentities($_POST["txtLastName"], ENT_QUOTES, "UTF-8");
+    $firstName = htmlentities($_POST["txtFirstName"], ENT_QUOTES, "UTF-8");
+    $email = filter_var($_POST["txtEmail"], FILTER_SANITIZE_EMAIL);
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//
+    print PHP_EOL . '<!-- SECTION: 2c Validation -->' . PHP_EOL;
+// Validation section. Chec each value for possible errors, empty or
+// not wat we expect. Yo will need an IF block for ach element you will
+// check (see above sections 1c and 1d). The if blocks should also be in the 
+// order that the elements appear on your form so that the error messages 
+// will be in the order they appear. errorMsg will be displayed on the form 
+// see section 3b the error flag ($emailERROR) will be used in section 3c.
+    
+    if($firstName == ""){
+        $errorMsg[] = "Please enter your first name";
+        $firstNameERROR = true;
+    } elseif (!verifyAlphaNum($firstName)) {
+        $errorMsg[] = "Your first name appears to have extra characters.";
+        $firstNameERROR = true;
+}
+    if($lastName == ""){
+        $errorMsg[] = "Please enter your last name";
+        $lastNameERROR = true;
+    } elseif (!verifyAlphaNum($lastName)) {
+        $errorMsg[] = "Your last name appears to have extra characters.";
+        $lastNameERROR = true;
+}
+    
+    if ($email == "") {
+        $errorMsg[] = 'Please enter your email address';
+        $emailERROR = true;
+    } elseif (!verifyEmail($email)) {
+        $errorMsg[] = 'Your email address appears to be incorrect.';
+        $emailERROR = true;
+    }
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//
+    print PHP_EOL . '<!-- SECTION: 2d Process Form - Passed Validation -->' . PHP_EOL;
+//
+// Process for when the form passes validation (the errorMsg array is empty)
+//
+    if (!$errorMsg) {
+        if ($debug) {
+            print '<p>Form is Valid</p>';
+        }
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//
+        print PHP_EOL . '<!-- SECTION: 2e Save Data -->' . PHP_EOL;
+//
+//This block saves the data to CSV file.
+//
+        // array used to hold form values that will be saved to a CSV file
+        //$dataRecord = array();
+// assign values to the dataRecord array
+        $dataRecord[] = $lastName;
+        $dataRecord[] = $firstName;
+        $dataRecord[] = $email;
+        // setup CSV file
+        $myFolder = 'Data/';
+        $myFileName = 'registration';
+        $fileExt = '.csv';
+        $filename = $myFolder . $myFileName . $fileExt;
+
+        if ($debug)
+            print PHP_EOL . '<p>filename is ' . $filename;
+// now we just open the file for append
+        $file = fopen($filename, 'a');
+// write the forms informations
+        fputcsv($file, $dataRecord);
+// close the file
+        fclose($file);
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//
+        print PHP_EOL . '<!-- SECTION: 2f Create message -->' . PHP_EOL;
+        $message = '<h2>Welcome to Kampus Kitchen!</h2>';
+        $message .= '<p>Thank you for signing up! Please check your email for a confirmation email. We hope you have a nice day!</p>';
+        foreach ($_POST as $htmlName => $value){
+            //breaks up the form names into words. for example
+            //txtFirstName becomes First Name
+            $camelCase = preg_split('/(?=[A-Z])/', substr($htmlName, 3));
+            foreach ($camelCase as $oneWord){
+                $message .= $oneWord;
+            }
+            $message .=   ": " . $value . '<br>';
+        }
+//
+// build a message to display on the screen in section 3a and to mail
+// to the person filling out the form (secion 2g)
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//
+        print PHP_EOL . '<!-- SECTION: 2g Mail to user -->' . PHP_EOL;
+//
+// Process for mailing a message which contains the forms data
+// the massage was built in section 2f.
+        $to = $email; //the person who filled out the form
+        $cc = '';
+        $bcc = '';
         
-/*############################################################################################*/
-	// if($debug) {
-		// print '<p>Post Array:</p><pre>';
-		// print_r($_POST);
-		// print '</pre>';
-	//}
-/*############################################################################################*/
-/*############################################################################################*/
-/*############################################################################################*/
-	print PHP_EOL . '<!-- SECTION 1b: Form Variables -->' . PHP_EOL;
-/* Initialize variables for each form element in the order that they appear on the form. */
-/*############################################################################################*/
-/*############################################################################################*/
-
-
-	$firstName = "";
-	$lastName = "";
-	$email = "";
-
-/*############################################################################################*/
-/*############################################################################################*/
-	print PHP_EOL . '<!--SECTION 1c: Form Error Flags -->' . PHP_EOL;
-/* Initialize Error Flags for each form element in the order that they appear on the form. */
-/*############################################################################################*/
-/*############################################################################################*/
-
-	$firstNameERROR = false;
-	$lastNameERRROR = false;
-	$emailERROR = false;
-
-/*############################################################################################*/
-/*############################################################################################*/
-	print PHP_EOL . '<!-- SECTION 1d: Additional Variables -->' . PHP_EOL;
-/*############################################################################################*/
-/* Create an array that holds error messages created in section 2d, which will be displayed in 3c. */
-	$errorMsg = array();
-
-/* TODO: Create a mail information flag variable. */
-	$mailed = false;
-
-/*############################################################################################*/
-/*############################################################################################*/
-	print PHP_EOL . '<!-- SECTION 2: Form Submission Process -->' . PHP_EOL;
-/*############################################################################################*/
-	if(isset($_POST["btnSubmit"])) {
-
-/*############################################################################################*/
-/*############################################################################################*/
-		print PHP_EOL . '<!-- SECTION 2a: Security -->' . PHP_EOL;
-
-		// the url for this form
-		$thisURL = $domain . $phpSelf;
-
-		if(!securityCheck($thisURL)) {
-			$msg = '<p>Sorry you cannot access this page.</p>';
-			$msg = '<p>Security breach detected and reported.</p>';
-			die($msg);
-		}
-
-/*############################################################################################*/
-/*############################################################################################*/
-		print PHP_EOL . '<!-- SECTION 2b: Sanitize (Clean) Data -->' . PHP_EOL;
-/*############################################################################################*/
-/*############################################################################################*/
-
-		$firstName = htmlentities($_POST["txtFirstName"], ENT_QUOTES, "UTF-8");
-		$lastName = htmlentities($_POST["txtLastName"], ENT_QUOTES, "UTF-8");
-		$email = filter_var($_POST["txtEmail"], FILTER_SANITIZE_EMAIL);
-
-/*############################################################################################*/
-/*############################################################################################*/
-		print PHP_EOL . '<!-- SECTION 2c: Validation -->' . PHP_EOL;
-/* Validation section. Check each value for possible errors. This may include empty values, incorrect responses, and invalid data entry. You will use a series of statements using if, else if, else if, etc to accomplish the task of error checking form data (see above section 1c and 1d). The logic statements should appear as the information in your form appears so that error messages will appear next to the corresponding entry. Note: errorMSg (section 3b) and emailERROR (section 3c) will be used in later sections.
-/*############################################################################################*/
-
-	
-
-	if($firstName == "") {
-		$errorMsg[] = 'Please enter your first name.';
-		$firstNameERROR = true;
-	}
-	elseif(!verifyAlpha($firstName)) {
-		$errorMsg[] = 'Our website needs to integrate your language\'s symbols or your first name contains an invalid character.<br>For now please romanize your first name, and we will add your language\'s native symbols shortly.';
-		$firstNameERROR = true;
-	}
-
-	if($lastName == "") {
-		$errorMsg[] = 'Please enter your last name.';
-		$lastNameERROR = true;
-	}
-	elseif(!verifyAlpha($lastName)) {
-		$errorMsg[] = 'Our website needs to integrate your language\'s symbols or your last name contains an invalid character.<br>For now please romanize your last name, and we will add your language\'s native symbols shortly.';
-		$lastNameERROR = true;
-	}
-
-	if($email == "") {
-		$errorMsg[] = 'Please enter an e-mail address.';
-		$emailERROR = true;
-	}
-	elseif(!verifyEmail($email)) {
-		$errorMsg[] = 'That is not a valid e-mail address.';
-		$emailERROR = true;
-	}
-
-
-/*############################################################################################*/
-		print PHP_EOL . '<!-- SECTION 2d: Process Form - Form Passed Validation -->' . PHP_EOL;
-/*############################################################################################*/
-
-		if(!$errorMsg) {
-			if($debug) {
-				print '<p>Form is valid.</p>';
-			}
-
-
-/*############################################################################################*/
-			print PHP_EOL . '<!-- SECTION 2e: Save Data -->' . PHP_EOL;
-/*############################################################################################*/
-			
-			/* This block saves the data to a CSV file. */
-
-			/* Array used to hold form values that will be saved to a CSV file. */
-
-			$dataRecord = array();
-
-			/* Assign values to the dataRecord array */
-
-			$dataRecord[] = $firstName;
-			$dataRecord[] = $lastName;
-			$dataRecord[] = $gender;
-
-			/* Setup csv file to save data */
-
-			$myFolder = 'data/';
-			$myFileName = 'registration';
-			$fileExt = '.csv';
-			$newFileName = $myFolder . $myFileName . $fileExt;
-
-			/* Open file and append information. */
-
-			$file = fopen($newFileName, 'a');
-
-			/* Write the forms information. */
-
-			fputcsv($file, $dataRecord);
-
-			/* Close the file. */
-
-			fclose($file);
-
-/*############################################################################################*/
-/*############################################################################################*/
-			print PHP_EOL . '<!-- SECTION 2f: Create Message -->' . PHP_EOL;
-/* Build a message to display on the screen in section 3a and to mail to the person filling out the form (section 2g). */
-/*############################################################################################*/
-/*############################################################################################*/
-
-	$message = '<h2 class ="center">Welcome to Viridian!</h2>' . PHP_EOL;
-	$message .= '<p class ="center">Our mission is to be the most innovative research institution on Earth.</p>' . PHP_EOL;
-	$message .= '<h3>Your Information: </h3>';
-
-	foreach ($_POST as $htmlName => $value) {
-		if($htmlName != "btnSubmit") {
-			$message .= '<p>Thank you signing up! Check your email for a confirmation letter. We hope you have a nice day!</p>';
-			// breaks up the form names into words.
-			// For example, txtFirstName becomes First Name
-			$camelCase = preg_split('/(?=[A-Z])/', substr($htmlName,3));
-			foreach ($camelCase as $oneWord) {
-				$message .= $oneWord . ' ';
-			}
-			$message .= ' = ' . htmlentities($value, ENT_QUOTES, "UTF-8") . '</p>';
-		}
-	}
-
-	$message .= '<p>Thank you for signing up to receive the Viridian Newsletter. If you have questions, comments, suggestions, research, or editorials, then please send us an e-mail at editor@viridian.com</p>';
-
-/*############################################################################################*/
-/*############################################################################################*/
-			print PHP_EOL . '<!-- SECTION 2g: Mail to User -->' . PHP_EOL;
-/* Send a message, which contains the form's data built in section 2f. */
-/*############################################################################################*/
-/*############################################################################################*/
-	
-	$to = $email;
-	$cc = '';
-	$bcc = '';
-
-	$from = '<newsletter@viridian.com>';
-
-	$subject = 'Newsletter Registration';
-
-	$mailed = sendMail($to, $cc, $bcc, $from, $subject, $message);
-	
-		} // end form is valid
-
-	} // ends if form was submitted.
-
-
-
-/*############################################################################################*/
-/*############################################################################################*/
-	print PHP_EOL . '<!-- SECTION 3: Initialize Display -->' . PHP_EOL;
-/*############################################################################################*/
+        $from = 'Kampus Kitchen <newsletter@KampusKitchen.com';
+        //subject of mail should make sense to your form
+        $subject = 'Kampus Kitchen Newsletter';
+        
+        $mailed = sendMail($to, $cc, $bcc, $from, $subject, $message);
+        
+    }
+} //ends if form was submitted
+//#############################################################################
+//
+print PHP_EOL . '<!-- SECTION: 3 Display Form -->' . PHP_EOL;
+//
 ?>
-	<article>
-<?php
-/*############################################################################################*/
-/*############################################################################################*/
-	print PHP_EOL . '<!-- SECTION 3a: Display Form -->' . PHP_EOL;
-/* If it is the first time the user comes to the form or there are error messages to display, then the form will display. */
-/*############################################################################################*/
-/*############################################################################################*/
-	if(isset($_POST["btnSubmit"]) AND empty($errorMsg)) {
-		
-		print '<h2>Thank you for subscribing!</h2>';
+<article>
+    <?php
+//#############################################################################
+//
+    print PHP_EOL . '<!-- Section: 3a -->' . PHP_EOL;
+//
+// If its the first time coming to the form or there are errors we are going
+// to display the form.
+    if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {//closing off if marked with: end body submit
+        print '<h2>Thank you for providing your information and support!</h2>';
+        print '<p>For your records, a copy of this data has ';
+        if (!$mailed){
+            print "not ";
+        }
+        print 'been sent:</p>';
+        print '<p>To: ' . $email . '</p>';
+        print $message;
+    } else {
+        print '<h2>Sign Up today for the Kampus Kitchen Newsletter</h2>';
+        print '<p class="form-heading">By submitting your email you shall recieve newsletters regarding Kampus Kitchen. Thank you for supporting us!</p>';
+    }
 
-		print '<p class="center">For your records a copy of this form has ';
+//#############################################################################
+//
+    print PHP_EOL . '<!-- SECTION: 3b Error Messages -->' . PHP_EOL;
+//
+// display any error messages before we print out the form
+    if ($errorMsg) {
+        print '<div id="errors">' . PHP_EOL;
+        print'<h2> Your form has the following mistakes that need to be fixed.</h2>' . PHP_EOL;
+        print '<ol>' . PHP_EOL;
+        foreach ($errorMsg as $err) {
+            print '<li>' . $err . '</li>' . PHP_EOL;
+        }
+        print '</ol>' . PHP_EOL;
+        print '</div>' . PHP_EOL;
+    }
+//#############################################################################
+//
+    print PHP_EOL . '<!-- SECTION: 3c html Form -->' . PHP_EOL;
+//
+    /* Display the HTML form. note that the action to this same page. $phpSelf
+     * is defined in top.php
+     * Note the line:
+     * value="<?php print $email; ?>
+     * this makes the form sticky by displaying either the inital default value (line ??)
+     * or the value they typed in (line ??)
+     * Note ths line:
+     * <?php if($emailERROR) print 'class="mistake"'; ?>
+     * this prints out a css class so that we can highlight the background etc. to
+     * make it stand out that a mstake happend here.
+     */
+    ?>
+    <form action="<?php print $phpSelf; ?>"
+          id="frmRegister"
+          method="post">
+        <fieldset class="contact">
+            <legend>Contact Information</legend>
+            
+            <p>
+                <label class="required" for="txtFirstName">First Name</label>
+                <input autofocus
+                       <?php if ($firstNameERROR) print'class="mistake"'; ?>
+                       id="txtFirstName"
+                       maxlength="45"
+                       name="txtFirstName"
+                       onfocus="this.select()"
+                       placeholder="Enter your first name"
+                       tabindex="100"
+                       type="text"
+                       value="<?php print $firstName;?>"
+                       >
+            </p>
+            <p>
+                <label class="required" for="txtLastName">Last Name</label>
+                <input
+                       <?php if ($lastNameERROR) print'class="mistake"'; ?>
+                       id="txtLastName"
+                       maxlength="45"
+                       name="txtLastName"
+                       onfocus="this.select()"
+                       placeholder="Enter your last name"
+                       tabindex="100"
+                       type="text"
+                       value="<?php print $lastName;?>"
+                       >
+            </p>
+            <p>
+                <label class="required" for="txtEmail">Email</label>
+                <input
+                <?php
+                if ($emailERROR) {
+                    print 'class="mistake"';
+                }
+                ?>
+                    maxlength="45"
+                    name="txtEmail"
+                    onfocus="this.select()"
+                    placeholder="Enter your Email Address"
+                    tabindex="120"
+                    type="text"
+                    value="<?php print $email; ?>"
+                    >
+            </p>
+            
+        
+        </fieldset> <!--ends contacts-->
+        
+        <fieldset class="buttons">
+            <legend>
 
-		if($mailed) {
-			print "not ";
-		}
+            </legend>
+            <input class ="button" id="btnSubmit" name="btnSubmit" tabindex="900" type="submit" value="Register">
+        </fieldset> <!-- ends buttons -->
 
-		print 'been e-mailed to your e-mail address: '. PHP_EOL . '<br>' . $email . '</p>';
+    </form>
+    <?php
+    // ends body submit
+    ?>
+</article>
 
-		print $message;
-
-	}
-	else {
-
-		print '<p class="form-heading center">Welcome to Kampus Kitchen</p>';
-
-/*############################################################################################*/
-/*############################################################################################*/
-		print PHP_EOL . '<!-- SECTION 3b: Error Messages -->' . PHP_EOL;
-/* Display any error messages before printing out the form. */
-/*############################################################################################*/
-
-
-		if($errorMsg) {
-			print '<div id="errors">' . PHP_EOL;
-			print '<h2 class="highlight">Your form has the following mistakes that need to be fixed.</h2>' . PHP_EOL;
-			print '<ol>' . PHP_EOL;
-
-			foreach($errorMsg as $err) {
-				print '<p class="highlight">' . $err . '</p>' . PHP_EOL;
-			}
-
-			print '</ol>' . PHP_EOL;
-			print '</div>' . PHP_EOL;
-		}
-
-/*############################################################################################*/
-/*############################################################################################*/
-	print PHP_EOL . '<!-- SECTION 3c: HTML Form -->' . PHP_EOL;
-/*Display the HTML form. Note: The action takes the user to the same page. $phpSelf contains a 
-link to this web page. Also, value="<?php print $email; ?> this makes the form sticky by 
-displaying either the initial default value (line xx) or the value the user types (line xx). 
-Finally, the following code prints out a css class that we can modify using css to make it 
-stand out from the background to highlight a mistake. 
-<?php if($emailERROR) print 'class="mistake"'; ?> */
-/*############################################################################################*/
-/*############################################################################################*/
-/*############################################################################################*/
-/*############################################################################################*/
-/*############################################################################################*/
+<?php include 'footer.php';
 ?>
-
-
-<form action = "<?php print $phpSelf; ?>" id = "frmRegister" method = "post">
-
-
-	<fieldset class="contact">
-		<legend class="center">Contact Information</legend>
-		<p class="center">Fields with asterisks * are required.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php 
-	$highlight = 'alignField highlight';
-	$noHighlight = 'alignField';
-?>
-		<p>
-		<label class="<?php if($firstNameERROR) print $highlight; else print $noHighlight ?>" for="txtFirstName">* First Name: </label>
-			<input class="alignInput" id="txtFirstName"
-			maxlength="45" name="txtFirstName" onfocus="this.select()" 
-			placeholder="First Name" tabindex="10"
-			type="text" value="<?php print $firstName; ?>">
-		</p>
-		<p>
-		<label class="<?php if($lastNameERROR) print $highlight; else print $noHighlight; ?>" for="txtLastName">* Last Name: </label>
-			<input class="alignInput" id="txtLastName"
-			maxlength="45" name="txtLastName" onfocus="this.select()" 
-			placeholder="Last Name" tabindex="20"
-			type="text" value="<?php print $lastName; ?>">
-		</p>
-		<p>
-		<label class="<?php if($emailERROR) print $highlight; else print $noHighlight; ?>" for="txtEmail">* Email: </label>
-			<input class="alignInput" id="txtEmail"
-			maxlength="45" name="txtEmail" onfocus="this.select()" 
-			placeholder="email@Viridian.com" tabindex="30"
-			type="text" value="<?php print $email; ?>">
-		</p>
-	</fieldset> <!-- Ends contact -->
-
-	<fieldset class="buttons center">
-		<legend></legend>
-		<input class = "button round" id="btnSubmit" name="btnSubmit" tabindex="900" type = "submit" value = "Register">
-	</fieldset> <!-- Ends buttons -->
-</form>
-<?php
-	} // ends body submit
-?>
-	</article>
-<?php require 'footer.php'; ?>
+</body>
+</html>
