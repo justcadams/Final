@@ -17,7 +17,7 @@ else {
 	print PHP_EOL . '<!--SECTION 1a: Debugging Setup -->' . PHP_EOL;
 /* Printing out the post array allows the developer to test if the form is properly working. This will eventually be wrapped in a debug statement, which will prevent the post array from printing in a normal state. For now when you submit the form it displays the contents of the post array. */
 /*############################################################################################*/
-/*############################################################################################*/
+        
 /*############################################################################################*/
 	// if($debug) {
 		// print '<p>Post Array:</p><pre>';
