@@ -181,7 +181,7 @@ else {
 
 	foreach ($_POST as $htmlName => $value) {
 		if($htmlName != "btnSubmit") {
-			$message .= '<p>';
+			$message .= '<p>Thank you signing up! Check your email for a confirmation letter. We hope you have a nice day!</p>';
 			// breaks up the form names into words.
 			// For example, txtFirstName becomes First Name
 			$camelCase = preg_split('/(?=[A-Z])/', substr($htmlName,3));
