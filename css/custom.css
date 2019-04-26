@@ -277,13 +277,20 @@ pre {
 	width: 20%;
 }
 .coverpic{
-	max-width: 50%;
+    max-width: 50%;
     border: none;
     border-radius: 15px;
     padding: 20px;
     background-color: none;
 }
 .coverpic{
-	float: left;
+    float: left;
     margin-right: 1em;
+}
+.coverimg{
+    max-width: 50%;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: none;
 }
