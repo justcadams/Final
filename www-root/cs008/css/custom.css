@@ -60,7 +60,7 @@ body {
     /* Sets the weight of a font based on a integer value. Note: Normal text is 400, bold text is 700, the maximum is 900.*/
     font-weight: 500;
     /* Sets the font-size for all children of the head, body, and footer elements to their native browser size.*/
-    font-size: 1vw;
+    font-size: 2vw;
     /*
     text-rendering: optimizeLegibility;
     
@@ -238,8 +238,31 @@ img.logo {
         <figure class="right small">
 */
 
+.alignInput {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 .bold {
     font-weight: 900;
+}
+
+.coverpic {
+    float: left;
+    margin-right: 1em;
+    width: 50%;
+    height: auto;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.coverimg{
+    max-width: 50%;
+    height: auto;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
 }
 
 .center {
@@ -292,30 +315,7 @@ img.logo {
     display: table;
     width: 20%;
 }
-.coverpic{
-    width: 50%;
-    height: auto;
-    border: none;
-    border-radius: 15px;
-    padding: 20px;
-}
-.coverpic{
-    float: left;
-    margin-right: 1em;
-}
-.coverimg{
-    max-width: 50%;
-    height: auto;
-    border: none;
-    border-radius: 15px;
-    padding: 20px;
-}
-#txtComments{
-    position: absolute;
-    bottom: 50;
-    right: 50;
-    text-align: left;
-}
-.alignField{
-    margin: 5px;
+
+#comments {
+    vertical-align: top;
 }
