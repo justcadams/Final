@@ -7,3 +7,4 @@
 		<link rel="stylesheet" href='css/custom.css'>
 		<link rel="icon" type="image/png" href="images/aviation-logo.jpg">
 		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald">
+                <link rel="stylesheet" type="text/css" href="//fonts.gooleapis.com/css?family=Spectral">
