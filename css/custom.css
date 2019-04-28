@@ -96,11 +96,11 @@ body {
 
 article {
 	width: 100%;
-	background-color: lightblue;
+	background-color: white;
 }
 
 button {
-	background-color: lightblue;
+	background-color: white;
 	text-align: center;
 	width: 10vw;
 	padding: 0.6vw;
@@ -139,7 +139,7 @@ footer {
 }
 
 header {
-	background-image: radial-gradient(ellipse at bottom center, orange, yellow, lightblue, lightblue, lightblue);
+	background-image: radial-gradient(ellipse at bottom center, orange, yellow, white, white, white);
 	border-radius: 1em;
 }
 
@@ -204,12 +204,12 @@ nav {
 
 p {
 	margin: 0em;
-	background-color: lightblue;
+	background-color: white;
 }
 
 pre {
 	margin: 0em;
-	background-color: lightblue;
+	background-color: white;
 }
 
 /* 	these are called class rules. in order for these to work you would
