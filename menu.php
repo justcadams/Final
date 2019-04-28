@@ -15,36 +15,36 @@ else {
 <h2 class="italic">Ask to join our e-mail list in store or <a href="newsletter.php">sign up</a> on the newsletter page.</h2>
 
 <h3>Breakfast Sandwiches</h3>
-<h4 class="bold italic">The Little John<p class="inline">$6.99</p></h4>
+<h4 class="bold italic">The Little John - <p class="inline">$6.99</p></h4>
 <p>Ham, Bacon, Sausage, 2 Eggs, Cheese, Hash Brown, and Sriracha Sauce on a Large Ciabatta.</p>
-<h4 class="bold italic">The Lumberjack <p class="inline">$4.25</p></h4>
+<h4 class="bold italic">The Lumberjack - <p class="inline">$4.25</p></h4>
 <p>Egg, American Cheese, Hash Brown, Choice of Meat (Bacon, Ham, or Sausage) on an English Muffin.</p>
-<h4 class="bold italic">The Sassy Chicken Wrap <p class="inline">$4.49</p></h4>
+<h4 class="bold italic">The Sassy Chicken Wrap - <p class="inline">$4.49</p></h4>
 Egg, Buffalo Chicken, Jalapeno, Ranch, Sriracha Sauce & Cheddar Cheese.
-<h4 class="bold italic">Western Omelet Wrap <p class="inline">$4.49</p></h4>
+<h4 class="bold italic">Western Omelet Wrap - <p class="inline">$4.49</p></h4>
 <p>Black Forest Ham, Onion, Green Pepper, American Cheese, & Egg.</p>
-<h4 class="bold italic">Sriracha Breakfast Wrap <p class="inline">$4.99</p></h4>
+<h4 class="bold italic">Sriracha Breakfast Wrap - <p class="inline">$4.99</p></h4>
 <p>Sausage, Bacon, Broccoli, Tomato, American Cheese, & Egg.</p>
-<h4 class="bold italic">The JC Veggie Special Breakfast Wrap <p class="inline">$4.49</p></h4>
+<h4 class="bold italic">The JC Veggie Special Breakfast Wrap - <p class="inline">$4.49</p></h4>
 <p>Black Beans, Salsa, Onion, Tomato, American Cheese, & Egg.</p>
-<h4 class="bold italic">Steak Egg & Cheese <p class="inline">$4.99</p></h4>
+<h4 class="bold italic">Steak Egg & Cheese - <p class="inline">$4.99</p></h4>
 <p>Seasoned Shaved Steak, Cheddar Cheese, American Cheese, Fried Egg on a Ciabatta Roll.</p>
-<h4 class="bold italic">Pastrami Reuben Breakfast Wrap <p class="inline">$4.49</p></h4>
+<h4 class="bold italic">Pastrami Reuben Breakfast Wrap - <p class="inline">$4.49</p></h4>
 <p>Pastrami, Sauerkraut, Swiss Cheese, Thousand Island Dressing.</p>
 <h4 class="bold italic">Make Your Own Sunrise Sandwich</h4>
 <h4 class="bold">Meats: Bacon, Ham, Pastrami, Sausage, Steak, Buffalo Chicken, Egg, Double Egg</h4>
-<h4 class="bold">Cheese: American, Pepper Jack, Provolone, Swiss/h4>
+<h4 class="bold">Cheese: American, Pepper Jack, Provolone, Swiss</h4>
 <h4 class="bold">Veggies: Banana Pepper, Black Beans, Black Olives, Broccoli, Green Pepper, Hash Brown, Jalapeno, Onion, Pickles, Sauerkraut, Tomato</h4>
-<h4 class="bold">Dressing: Ranch, Salsa, Sriracha, Thousand Island Dressing</h4>
+<h4 class="bold">Dressing: Ranch, Salsa, Sirracha, Thousand Island Dressing</h4>
 <h4 class="bold">Bread: English Muffin, Butter Croissant, Buttermilk Biscuit, Small Ciabatta, or Large Ciabatta</h4>
 
 <h3>Lunch Specials</h3>
 <h3>Salads</h3>
-<h4 class="bold italic">Garden Salad <p class="inline">$5.95</p></h4>
+<h4 class="bold italic">Garden Salad - <p class="inline">$5.95</p></h4>
 <p>(Fresh Greens, Tomatoes, Onions, Peppers, Cucumbers, Carrots).</p>
-<h4 class="bold italic">Chef Salad <p class="inline">$7.95</p></h4>
+<h4 class="bold italic">Chef Salad - <p class="inline">$7.95</p></h4>
 <p>(Garden Salad with Ham, Turkey, Egg, and Swiss Cheese).</p>
-<h4 class="bold italic">Buffalo Chicken Caeser <p class="inline">$7.95</p></h4>
+<h4 class="bold italic">Buffalo Chicken Caeser - <p class="inline">$7.95</p></h4>
 <p>(Fresh Greens, Parmesan Cheese, Breaded Buffalo Chicken, Bacon)</p>
 
 <h3>Soups</h3>
@@ -56,7 +56,7 @@ Call to find out our specials.</p>
 <h4>Rolls: <p class="inline">Sub, White or Wheat. Ciabatta, White or Wheatberry.</p></h4>
 <h4>Wraps: <p class="inline">White, Wheat, Spinach, Sundried Tomato, Jalapeno Cheddar, or Garlic Herb.</p></h4>
 <h4>Meats: <p class="inline">Ham, Turkey, Roast Beef, Salami, Capicola, Chicken Salad, Tuna Salad, and Seafood Salad.</p></h4>
-<h4>Toppings: <p class="inline">Swiss, American, Provolone, Cheddar, Romaine Lettuce, Tomato, Sliced Red Onions, Pickles, Banana Peppers, Green Peppers, Black Olives, Jalapenos, Cucumber, Carrot, Honey Dijon, Deli Mustard, Mayonnaise, Oil BLend, Chipotle Mayonnaise, Horseradish Mayonnaise, Sriracha Mayonnaise, Garlic Mayonnaise.</p></h4>
+<h4>Toppings: <p class="inline">Swiss, American, Provolone, Cheddar, Romaine Lettuce, Tomato, Sliced Red Onions, Pickles, Banana Peppers, Green Peppers, Black Olives, Jalapenos, Cucumber, Carrot, Honey Dijon, Deli Mustard, Mayonnaise, Oil Blend, Chipotle Mayonnaise, Horseradish Mayonnaise, Sriracha Mayonnaise, Garlic Mayonnaise.</p></h4>
 
 <h3>Specialty Sandwiches</h3>
 <h5 class="twocolcenter bold italic"><p class="col">Small $5.99</p><p class="col">Large $8.99</p></h5>
@@ -68,7 +68,7 @@ Call to find out our specials.</p>
 <h5 class="twocolcenter bold italic"><p class="col">Small $4.99</p><p class="col">Large $7.99</p></h5>
 <h4 class="bold inline">Vegetable - </h4><p class="inline">Cheese and your choice of vegetables.</p></h4>
 
-<h3 class="bold">Paninis<p class="inline">$8.99</p></h3>
+<h3 class="bold">Paninis - <p class="inline">$8.99</p></h3>
 <h4 class="bold">Meat Loaf Panini Wrap</h4>
 <p class="inline">Meat Loaf, Bacon, Mustard, Ketchup, American Cheese.</p>
 <h4 class="bold">Salami Panini</h4>
