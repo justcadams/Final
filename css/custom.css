@@ -88,7 +88,7 @@ body {
   	*/
   	/*text-rendering: optimizeLegibility;*/
   	text-rendering: optimizeSpeed;
-	background-color: rgba(255,255,255,1.0);
+	background-color: #fffdd0;
 	border-radius: 1em;
 	word-break: normal;
 	box-shadow: 0.1em 0.1em 0.2em 0.2em rgba(200, 200, 200, 0.8);
@@ -139,7 +139,7 @@ footer {
 }
 
 header {
-	background-image: radial-gradient(ellipse at bottom center, orange, yellow, white, white, white);
+	background-image: radial-gradient(ellipse at bottom center, orange, yellow, #409bc3, #409bc3, #409bc3);
 	border-radius: 1em;
 }
 
@@ -293,4 +293,13 @@ pre {
     border: none;
     border-radius: 15px;
     padding: 20px;
+}
+#txtComments{
+    position: absolute;
+    bottom: 50;
+    right: 50;
+    text-align: left;
+}
+.alignField{
+    margin: 5px;
 }
