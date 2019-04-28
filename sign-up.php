@@ -139,7 +139,7 @@ if (isset($_POST["btnSubmit"])) {
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 //
         print PHP_EOL . '<!-- SECTION: 2f Create message -->' . PHP_EOL;
-        $message = '<h2>Welcome to Kampus Kitchen!</h2>';
+        $message = '<h2>Welcome to Campus Kitchen!</h2>';
         $message .= '<p>Thank you for signing up! Please check your email for a confirmation email. We hope you have a nice day!</p>';
         foreach ($_POST as $htmlName => $value){
             //breaks up the form names into words. for example
@@ -163,9 +163,9 @@ if (isset($_POST["btnSubmit"])) {
         $cc = '';
         $bcc = '';
         
-        $from = 'Kampus Kitchen <newsletter@KampusKitchen.com';
+        $from = 'Campus Kitchen <newsletter@CampusKitchen.com';
         //subject of mail should make sense to your form
-        $subject = 'Kampus Kitchen Newsletter';
+        $subject = 'Campus Kitchen Newsletter';
         
         $mailed = sendMail($to, $cc, $bcc, $from, $subject, $message);
         
@@ -194,8 +194,8 @@ print PHP_EOL . '<!-- SECTION: 3 Display Form -->' . PHP_EOL;
         print '<p>To: ' . $email . '</p>';
         print $message;
     } else {
-        print '<h2>Sign Up today for the Kampus Kitchen Newsletter</h2>';
-        print '<p class="form-heading">By submitting your email you shall recieve newsletters regarding Kampus Kitchen. Thank you for supporting us!</p>';
+        print '<h2>Sign Up today for the Campus Kitchen Newsletter</h2>';
+        print '<p class="form-heading">By submitting your email you shall recieve newsletters regarding Campus Kitchen. Thank you for supporting us!</p>';
     }
 
 //#############################################################################
