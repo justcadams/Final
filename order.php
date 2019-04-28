@@ -361,7 +361,7 @@ else {
 	}
 	else {
 
-		print '<p class="form-heading center">Welcome to Kampus Kitchen</p>';
+		print '<p class="form-heading center">Welcome to Campus Kitchen</p>';
 
 /*############################################################################################*/
 /*############################################################################################*/
