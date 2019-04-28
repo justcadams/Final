@@ -1,18 +1,17 @@
 <?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-$dbh = new PDO(
-    'mysql:host=webdb.uvm.edu;dbname=JADAMS7_viridian',
-    $username = 'jadams7_admin',
-    $password = 'RisingPhoenix..00',
-    array(
-        PDO::MYSQL_ATTR_SSL_CA => '/etc/pki/tls/certs/webdb-cacert.pem',
-    )
-);
-print $dbh;
+    chdir('../../../inc');
+    print getcwd() . '<br>';
+    require 'login.php';
+    chdir('/users/j/a/jadams7/www-root/cs008/final');
+    print getcwd() .'<br>';
+    // require 'phpFunctions.php';
+    print getcwd() . '<br>';
+    $files = scandir('.');
+    print_r($files);
+    $dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $dbConn->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    print "hello PDO!<br>";
+    $status = $dbConn->getAttribute(PDO::ATTR_CONNECTION_STATUS);
+    print $status . '<br>';
+    print "hello world!<br>";
 ?>
