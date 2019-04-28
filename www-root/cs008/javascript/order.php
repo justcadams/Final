@@ -361,7 +361,7 @@ else {
 	}
 	else {
 
-		print '<p class="form-heading center">Welcome to Campus Kitchen</p>';
+		print '<p class="form-heading center">Welcome to Kampus Kitchen</p>';
 
 /*############################################################################################*/
 /*############################################################################################*/
@@ -640,10 +640,10 @@ stand out from the background to highlight a mistake.
 			type="text" value="<?php print $sZipCode; ?>" tabindex="140">
 		</p>
 		<p>
-		<label class="<?php if($commentsERROR) print $highlight; else print $noHighlight ?>" id="comments" for="txtComments">Comments: </label>
+		<label class="<?php if($commentsERROR) print $highlight; else print $noHighlight ?>" for="txtComments">Comments: </label>
 			<textarea class="alignInput" id="txtComments"
 			maxlength="1000" name="txtComments" onfocus="this.select()" 
-			placeholder="Dear Campus Kitchen," tabindex="150"
+			placeholder="Dear Editor," tabindex="150"
 			type="text" value="<?php print $comments; ?>" tabindex="150"></textarea> 
 		</p>
 	</fieldset> <!-- Ends contact -->
