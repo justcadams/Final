@@ -10,7 +10,7 @@ else {
 ?>
 <article>
 <h1>Campus Kitchen Deli</h1>
-<h2>273 Colchester Avenue<br>Burlington, VT 05401<br>Phone: (802) 863-9105<br>kampuskitchendeli@gmail.com</h2>
+<h2>273 Colchester Avenue<br>Burlington, VT 05401<br>Phone: (802) 863-9105<br>campuskitchendeli@gmail.com</h2>
 </article>
 <div id="googleMap" style="width: 100%;height: 500px"></div>
 <script>
