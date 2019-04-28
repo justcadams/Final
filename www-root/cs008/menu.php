@@ -15,21 +15,21 @@ else {
 <h2 class="italic">Ask to join our e-mail list in store or <a href="newsletter.php">sign up</a> on the newsletter page.</h2>
 
 <h3>Breakfast Sandwiches</h3>
-<h4 class="bold italic">The Little John<p class="inline">$6.99</p></h4>
+<h4 class="bold italic">The Little John - <p class="inline">$6.99</p></h4>
 <p>Ham, Bacon, Sausage, 2 Eggs, Cheese, Hash Brown, and Sirracha Sauce on a Large Ciabatta.</p>
-<h4 class="bold italic">The Lumberjack <p class="inline">$4.25</p></h4>
+<h4 class="bold italic">The Lumberjack - <p class="inline">$4.25</p></h4>
 <p>Egg, American Cheese, Hash Brown, Choice of Meat (Bacon, Ham, or Sausage) on an English Muffin.</p>
-<h4 class="bold italic">The Sassy Chicken Wrap <p class="inline">$4.49</p></h4>
+<h4 class="bold italic">The Sassy Chicken Wrap - <p class="inline">$4.49</p></h4>
 Egg, Buffalo Chicken, Jalapeno, Ranch, Sirracha Sauce & Cheddar Cheese.
-<h4 class="bold italic">Western Omelet Wrap <p class="inline">$4.49</p></h4>
+<h4 class="bold italic">Western Omelet Wrap - <p class="inline">$4.49</p></h4>
 <p>Black Forest Ham, Onion, Green Pepper, American Cheese, & Egg.</p>
-<h4 class="bold italic">Sirracha Breakfast Wrap <p class="inline">$4.99</p></h4>
+<h4 class="bold italic">Sirracha Breakfast Wrap - <p class="inline">$4.99</p></h4>
 <p>Sausage, Bacon, Broccoli, Tomato, American Cheese, & Egg.</p>
-<h4 class="bold italic">The JC Veggie Special Breakfast Wrap <p class="inline">$4.49</p></h4>
+<h4 class="bold italic">The JC Veggie Special Breakfast Wrap - <p class="inline">$4.49</p></h4>
 <p>Black Beans, Salsa, Onion, Tomato, American Cheese, & Egg.</p>
-<h4 class="bold italic">Steak Egg & Cheese <p class="inline">$4.99</p></h4>
+<h4 class="bold italic">Steak Egg & Cheese - <p class="inline">$4.99</p></h4>
 <p>Seasoned Shaved Steak, Cheddar Cheese, American Cheese, Fried Egg on a Ciabatta Roll.</p>
-<h4 class="bold italic">Pastrami Reuben Breakfast Wrap <p class="inline">$4.49</p></h4>
+<h4 class="bold italic">Pastrami Reuben Breakfast Wrap - <p class="inline">$4.49</p></h4>
 <p>Pastrami, Sauerkraut, Swiss Cheese, Thousand Island Dressing.</p>
 <h4 class="bold italic">Make Your Own Sunrise Sandwich</h4>
 <h4 class="bold">Meats: Bacon, Ham, Pastrami, Sausage, Steak, Buffalo Chicken, Egg, Double Egg</h4>
@@ -40,11 +40,11 @@ Egg, Buffalo Chicken, Jalapeno, Ranch, Sirracha Sauce & Cheddar Cheese.
 
 <h3>Lunch Specials</h3>
 <h3>Salads</h3>
-<h4 class="bold italic">Garden Salad <p class="inline">$5.95</p></h4>
+<h4 class="bold italic">Garden Salad - <p class="inline">$5.95</p></h4>
 <p>(Fresh Greens, Tomatoes, Onions, Peppers, Cucumbers, Carrots).</p>
-<h4 class="bold italic">Chef Salad <p class="inline">$7.95</p></h4>
+<h4 class="bold italic">Chef Salad - <p class="inline">$7.95</p></h4>
 <p>(Garden Salad with Ham, Turkey, Egg, and Swiss Cheese).</p>
-<h4 class="bold italic">Buffalo Chicken Caeser <p class="inline">$7.95</p></h4>
+<h4 class="bold italic">Buffalo Chicken Caeser - <p class="inline">$7.95</p></h4>
 <p>(Fresh Greens, Parmesan Cheese, Breaded Buffalo Chicken, Bacon)</p>
 
 <h3>Soups</h3>
@@ -60,9 +60,9 @@ Call to find out our specials.</p>
 
 <h3>Specialty Sandwiches</h3>
 <h5 class="twocolcenter bold italic"><p class="col">Small $5.99</p><p class="col">Large $8.99</p></h5>
-<h4 class="bold inline">Italian - </h4><p class="inline">Ham, Salami, Capicola, Provolone Cheese, Italian Dressing, and your choice of vegetables.</p><br>
-<h4 class="bold inline">BLT - </h4><p class="inline">Bacon, Lettuce, Tomato, Mayonnaise.</p><br>
-<h4 class="bold inline">Hot Pastrami - </h4><p class="inline">Mustard, Swiss Cheese, Lean Pastrami Heated to Perfection!</p><br>
+<h4 class="bold inline">Italian - </h4><p class="inline"><br>Ham, Salami, Capicola, Provolone Cheese, Italian Dressing, and your choice of vegetables.</p><br>
+<h4 class="bold inline">BLT - </h4><p class="inline"><br>Bacon, Lettuce, Tomato, Mayonnaise.</p><br>
+<h4 class="bold inline">Hot Pastrami - </h4><p class="inline"><br>Mustard, Swiss Cheese, Lean Pastrami Heated to Perfection!</p><br>
 
 <h3>Veggie Sandwich</h3>
 <h5 class="twocolcenter bold italic"><p class="col">Small $4.99</p><p class="col">Large $7.99</p></h5>
