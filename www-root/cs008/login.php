@@ -2,7 +2,7 @@
     chdir('../../../inc');
     print getcwd() . '<br>';
     require 'login.php';
-    chdir('/users/j/a/jadams7/www-root/cs008/final');
+    chdir('/users/e/k/ekloeti/www-root/cs008/final');
     print getcwd() .'<br>';
     // require 'phpFunctions.php';
     print getcwd() . '<br>';
