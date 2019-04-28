@@ -60,7 +60,7 @@ body {
     /* Sets the weight of a font based on a integer value. Note: Normal text is 400, bold text is 700, the maximum is 900.*/
     font-weight: 500;
     /* Sets the font-size for all children of the head, body, and footer elements to their native browser size.*/
-    font-size: 2vw;
+    font-size: 1vw;
     /*
     text-rendering: optimizeLegibility;
     
@@ -184,6 +184,7 @@ nav {
 }
 
 p {
+    font-size: 15px;
     margin: 0em;
     background-color: ghostwhite;
 }
