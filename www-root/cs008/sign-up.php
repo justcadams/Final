@@ -1,11 +1,11 @@
-<?php
+<?php 
 $currentDirectory = getcwd();
 if($currentDirectory != '/users/j/a/jadams7/www-root/cs008/final') {
     chdir('/users/j/a/jadams7/www-root/cs008/final');
-include 'top.php';
+    include 'top.php';
 }
-else{
-include 'nav.php';
+else {
+    include 'top.php';
 }
 //%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
 print PHP_EOL . '<!--SECTION: 1 Initialize variables -->' . PHP_EOL;
@@ -194,8 +194,8 @@ print PHP_EOL . '<!-- SECTION: 3 Display Form -->' . PHP_EOL;
         print '<p>To: ' . $email . '</p>';
         print $message;
     } else {
-        print '<h2>Sign Up today for the Campus Kitchen Newsletter</h2>';
-        print '<p class="form-heading">By submitting your email you shall recieve newsletters regarding Campus Kitchen. Thank you for supporting us!</p>';
+        print '<h2 class="center">Sign Up today for the Campus Kitchen Newsletter</h2>';
+        print '<p class="form-heading center">By submitting your email you shall recieve newsletters regarding Campus Kitchen. Thank you for supporting us!</p>';
     }
 
 //#############################################################################
