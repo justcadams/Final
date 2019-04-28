@@ -27,7 +27,7 @@ Egg, Buffalo Chicken, Jalapeno, Ranch, Sirracha Sauce & Cheddar Cheese.
 <p>Sausage, Bacon, Broccoli, Tomato, American Cheese, & Egg.</p>
 <h4 class="bold italic">The JC Veggie Special Breakfast Wrap - <p class="inline">$4.49</p></h4>
 <p>Black Beans, Salsa, Onion, Tomato, American Cheese, & Egg.</p>
-<h4 class="bold italic">Steak Egg & Cheese <p class="inline">$4.99</p></h4>
+<h4 class="bold italic">Steak Egg & Cheese - <p class="inline">$4.99</p></h4>
 <p>Seasoned Shaved Steak, Cheddar Cheese, American Cheese, Fried Egg on a Ciabatta Roll.</p>
 <h4 class="bold italic">Pastrami Reuben Breakfast Wrap - <p class="inline">$4.49</p></h4>
 <p>Pastrami, Sauerkraut, Swiss Cheese, Thousand Island Dressing.</p>
