@@ -11,7 +11,7 @@ else {
 <article>
 	<h1>Welcome to Campus Kitchen and Aviation Deli!</h1>
 	<figure class="coverpic">
-            <img class="coverimg" src="images/KKStorefront.png" alt="Campus Kitchen Storefront">
+            <img class="coverimg" src="images/KKStorefront.jpg" alt="Campus Kitchen Storefront">
                 <figcaption>Campus Kitchen Storefront</figcaption>
             </figure>
 
