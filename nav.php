@@ -1,6 +1,6 @@
 <!--############################################## Header ##############################################-->
 <header>
-	<h1 hidden>Aviation Deli & Kampus Kitchen</h1>
+	<h1 hidden>Aviation Deli & Campus Kitchen</h1>
 <!--############################################## Main Navigation ##############################################-->
 	<main>
 <figure class="logo shadow">
