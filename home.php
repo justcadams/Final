@@ -9,10 +9,10 @@ else {
 }
 ?>
 <article>
-	<h1>Welcome to Kampus Kitchen and Aviation Deli!</h1>
+	<h1>Welcome to Campus Kitchen and Aviation Deli!</h1>
 	<figure class="coverpic">
-            <img class="coverimg" src="images/KKStorefront.png" alt="Kampus Kitchen Storefront">
-                <figcaption>Kampus Kitchen Storefront</figcaption>
+            <img class="coverimg" src="images/KKStorefront.png" alt="Campus Kitchen Storefront">
+                <figcaption>Campus Kitchen Storefront</figcaption>
             </figure>
 
 </article>
