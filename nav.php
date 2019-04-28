@@ -13,6 +13,6 @@
 		<button class="navigation"><a href="menu.php" class="button round">Menu<h3 hidden>Menu</h3></a></button>
 		<button class="navigation"><a href="order.php" class="button round">Order<h3 hidden>Order</h3></a></button>
 		<button class="navigation"><a href="contact.php" class="button round">Contact<h3 hidden>Contact</h3></a></button>
-		<button class="navigation"><a href="signup.php" class="button round">Sign Up><h3 hidden>Newsletter</h3></a></button>
+		<button class="navigation"><a href="signup.php" class="button round">Sign Up<h3 hidden>Newsletter</h3></a></button>
 </nav>
 </header>
