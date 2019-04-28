@@ -4,7 +4,7 @@
 <!--############################################## Main Navigation ##############################################-->
 	<main>
 <figure class="logo shadow">
-	<img alt="Deli Duo" src="images/aviation-logo.jpg" class="logo">
+    <img alt="Deli Duo" src="images/CKlogo.jpg" class="logo">
 	<figcaption class="center">Fine meats, fresh produce, locally sourced. <br>Established (year). <br> 273 Colchester Ave <br> Burlington, VT 05401 &sdot; (802) 863-9105<br>M-F: 7am-9pm, Sat: 9am-9pm, Sun: 9am-5pm</figcaption>
 </figure>
 <nav>
