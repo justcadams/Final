@@ -8,6 +8,7 @@
     print getcwd() . '<br>';
     $files = scandir('.');
     print_r($files);
+    print '<br>';
     $dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $dbConn->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     print "hello PDO!<br>";
