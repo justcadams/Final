@@ -27,8 +27,8 @@ html {
 	It is horizontally centered, vertically centered, and the image does not move.
 	*/
 
-    background: url("../images/tile.jpg") repeat fixed;
-    background-size: 25%;
+/*    background: url("../images/tile.jpg") repeat fixed;
+    background-size: 25%;*/
     /*
     The CSS padding-right property places space within an element's content that is contained
     within the border of the html element on the right hand side of the page.
