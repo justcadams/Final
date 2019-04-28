@@ -15,4 +15,5 @@
     $status = $dbConn->getAttribute(PDO::ATTR_CONNECTION_STATUS);
     print $status . '<br>';
     print "hello world!<br>";
+    
 ?>
