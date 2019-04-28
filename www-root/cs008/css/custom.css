@@ -285,7 +285,9 @@ img.logo {
 .form-heading {
 
 }
-
+highlight{
+    
+}
 .inline {
     display: inline;
 }
@@ -297,7 +299,9 @@ img.logo {
 .left {
     text-align: left;
 }
-
+NO-Highlight{
+    
+}
 .right {
     text-align: right;
 }
@@ -316,7 +320,6 @@ img.logo {
     display: table;
     width: 20%;
 }
-
 #comments {
     vertical-align: top;
 }
