@@ -275,7 +275,10 @@ pre {
 .col {
     display: table-cell;
 }
-
+.dropitem{
+    background-color: ghostwhite;
+    
+}
 .float-left {
     float: left;
 }
