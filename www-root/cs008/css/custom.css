@@ -315,9 +315,9 @@ NO-Highlight{
     position: relative;
     display: inline-block
 }
-.dropdown-content{
-    display: none;
-}
 .dropdown:hover .dropdown-content{
     display: block;
+}
+a{
+    font-size: 3vw;
 }

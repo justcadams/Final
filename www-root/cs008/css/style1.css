@@ -322,4 +322,13 @@ NO-Highlight{
 #comments {
     vertical-align: top;
 }
-
+.dropdown{
+    position: relative;
+    display: inline-block
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+a{
+    font-size: 3vw;
+}

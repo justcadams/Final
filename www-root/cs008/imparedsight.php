@@ -1,7 +1,7 @@
 <?php 
 $currentDirectory = getcwd();
-if($currentDirectory != '/users/j/a/jadams7/www-root/cs008/final') {
-	chdir('/users/j/a/jadams7/www-root/cs008/final');
+if($currentDirectory != '/users/e/k/ekloeti/www-root/cs008/final') {
+	chdir('/users/e/k/ekloeti/www-root/cs008/final');
 	require 'top.php';
 }
 else {
