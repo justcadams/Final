@@ -10,7 +10,7 @@
 	}
 
 	function getColData($dbConn, $table, $col) {
-		string $colString = "";
+		$colString = "";
 		foreach ($col as $key => $value) {
 			if($key == $numCols) {
 				$colString += $value;
@@ -24,8 +24,8 @@
 	}
 
 	function getRowData($dbConn, $table, $col, $condition, $limit) {
-		string $colString = "";
-		int $numCols = $count($col);
+		$colString = "";
+		$numCols = $count($col);
 		foreach ($col as $key => $value) {
 			if($key == $numCols) {
 				$colString += $value;
