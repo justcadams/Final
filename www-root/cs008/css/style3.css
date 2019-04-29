@@ -149,6 +149,9 @@ figure {
 footer {
     padding: 0.1em;
     font-size: 1vw;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    background-color: ghostwhite;
 }
 
 header {
@@ -291,6 +294,7 @@ pre {
 .form-heading {
 
 }
+
 highlight{
     
 }

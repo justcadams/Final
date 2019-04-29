@@ -122,8 +122,6 @@ button {
     border-style: outset;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
-    border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em;
     outline: none;
     font-size: 2vw;
     color: inherit;
@@ -151,6 +149,9 @@ figure {
 footer {
     padding: 0.1em;
     font-size: 1vw;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    background-color: ghostwhite;
 }
 
 header {
