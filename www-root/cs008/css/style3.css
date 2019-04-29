@@ -152,7 +152,7 @@ footer {
 }
 
 header {
-    background-image: radial-gradient(ellipse at bottom center, orange, yellow, #409bc3, #409bc3, #409bc3);
+    background-image: radial-gradient(ellipse at bottom center, orange, yellow, #409bc3, #409bc3);
     border-radius: 1em;
 }
 
@@ -207,7 +207,7 @@ img {
     border-top-right-radius: 1em;
     border-top-left-radius: 1em;
     border-bottom-right-radius: 1em;
-    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
     padding: 2vw;
     margin-left: 2vw;
     margin-right: 2vw;
@@ -220,7 +220,7 @@ nav {
     align-content: center;
     justify-content: center;
     border-bottom: none;
-    background: radial-gradient(ellipse at top center, yellow, lightgrey, grey, grey, grey, grey, grey, grey);
+    background: radial-gradient(ellipse at top center, lightgrey, grey, grey);
 }
 
 p {
