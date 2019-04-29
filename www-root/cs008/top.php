@@ -66,6 +66,8 @@ if(($parentFolder == 'final') && ($fileName == 'order')) {
 
 	include_once 'lib/mail-message.php';
 
+	print '<link rel="stylesheet" href="css/custom.css">' . PHP_EOL;
+
 	print '</head>' . PHP_EOL;
 	
 	print PHP_EOL . '<!--####################################### Finished including libraries ######################################-->' . PHP_EOL;
@@ -83,7 +85,18 @@ if(($parentFolder == 'final') && ($fileName == 'order')) {
 
 	print PHP_EOL . '<!--############################################## End of top.php #############################################-->' . PHP_EOL;
 }
+else if(($parentFolder == 'final') && ($fileName == 'style1')) {
+	print PHP_EOL . '<link rel="stylesheet" href="css/style1.css">' . PHP_EOL;
+}
+else if(($parentFolder == 'final') && ($fileName == 'style2')) {
+	print PHP_EOL . '<link rel="stylesheet" href="css/style2.css">' . PHP_EOL;
+}
+else if(($parentFolder == 'final') && ($fileName == 'style3')) {
+	print PHP_EOL . '<link rel="stylesheet" href="css/style3.css">' . PHP_EOL;
+}
 else {
+
+	print '<link rel="stylesheet" href="css/custom.css">' . PHP_EOL;
 	
 	print '</head>' . PHP_EOL;
 	
