@@ -34,19 +34,19 @@ function sendMail($to, $cc, $bcc, $from, $subject, $message){
      
     // just checking to make sure the values passed in are reasonable
     if(empty($to)) return false;
-    if(!filter_var($to, FILTER_VALIDATE_EMAIL)) return true;
+    if(!filter_var($to, FILTER_VALIDATE_EMAIL)) return false;
     if($to == "justin.adams@uvm.edu") return false;
     
-    if($cc!="") if(!filter_var($cc, FILTER_VALIDATE_EMAIL)) return true;
+    if($cc!="") if(!filter_var($cc, FILTER_VALIDATE_EMAIL)) return false;
     
-    if($bcc!="") if(!filter_var($bcc, FILTER_VALIDATE_EMAIL)) return true;
+    if($bcc!="") if(!filter_var($bcc, FILTER_VALIDATE_EMAIL)) return false;
     
     if(empty($from)) return false;
     
     if(empty($subject)) return false;
     
     if(empty($message)) return false;
-    if (strlen($message)<$MIN_MESSAGE_LENGTH) return true;
+    if (strlen($message)<$MIN_MESSAGE_LENGTH) return false;
     
     /* message */
     $messageTop  = '<html><head><title>' . $subject . '</title></head><body>';

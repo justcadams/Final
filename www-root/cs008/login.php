@@ -8,7 +8,7 @@
     require 'top.php';
 ?>
 
-    <h2>Enter Username and Password</h2>
+    <h2 class="center">Enter Username and Password</h2>
         <div class = "container form-signin center">
             <?php
                 $msg = '';
@@ -28,8 +28,10 @@
         <div class = "container center">
         <form class = "form-signin" action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method = "post">
             <h4 class = "form-signin-heading"><?php echo $msg; ?>&nbsp;</h4>
-            <input type = "text" class = "form-control" name = "username" placeholder = "username" required autofocus><br>
-            <input type = "password" class = "form-control" name = "password" placeholder = "password" required><br>
+            <label class = "alignInput <?php if($usernameERROR) print $highlight; else print $noHighlight; ?>" id="usernameLabel">Username:</label>
+            <input type = "text" class = "form-control <?php if($usernameERROR) print $highlight; else print $noHighlight; ?>" name = "username" placeholder = "username" required autofocus><br>
+            <label class = "alignInput" id="passwordLabel <?php if($passwordERROR) print $highlight; else print $noHighlight; ?>">Password:</label>
+            <input type = "password" class = "form-control <?php if($passwordERROR) print $highlight; else print $noHighlight; ?>" name = "password" placeholder = "password" required><br>
             <button class = "btn btn-lg btn-primary btn-block" type = "submit" name = "login">Login</button>
          </form>            
         </div>
