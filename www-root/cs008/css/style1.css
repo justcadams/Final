@@ -9,4 +9,317 @@ and open the template in the editor.
 
 NIGHT OWL
 */
+/*
+The html tag represents the root of an HTML document,
+which is a box that everything in a web page goes into.
+Entering the html tag in a css document allows properties within the document to be applied to the element,
+which means changing properties within fields in this document changes how a web page appears.
+
+Example CSS Code:
+
+html {
+        color: green;
+}
+
+color - Field for the color of text within a web page.
+green - Property for the color of text within a web page.
+html - Element that contains the color field. All elements within the html class will be green.
+
+Changes to the element extend to any children set to inherit the parent element's property.
+Some elements will inherit parent properties without being specifically set. In most cases,
+this applies to text only.
+*/
+
+html {
+
+    /*
+    Sets an image as the background. The html class receives an image as the field value for the background.
+    The image does not repeat even if it runs out of pixels within the html window (no-repeat).
+    It is horizontally centered, vertically centered, and the image does not move.
+    */
+
+    /*    background: url("../images/tile.jpg") repeat fixed;
+        background-size: 25%;*/
+    /*
+    The CSS padding-right property places space within an element's content that is contained
+    within the border of the html element on the right hand side of the page.
+    */
+    padding-right: 10%;
+    /*
+    The CSS padding-left property places space within an element's content that is contained
+    within the border of the html element on the left hand side of the page.
+    */
+    padding-left: 10%;
+    /*
+    The CSS padding-bottom property places space within an element's content that is contained
+    within the border of the html element on the bottom of the page.
+    */
+    padding-bottom: 5%;
+}
+
+body {
+    /* Sets the color of text within the head, body, and footer to a specific hex value.*/
+    color: black;
+    /* Sets the mouse cursor within the head, body, and footer class to the system default cursor.*/
+    cursor: default;
+    /*
+    Establishes a family of fonts to be used within the head, body, and footer class
+    The first font used is open-sans and the remaining fonts are "fallbacks" 
+    should the user's browser not support the selected font.
+    */
+    font-family:'Spectral', 'Helvetica', 'Oswald', 'sans-serif', 'open-sans', 'Tahoma', 'Helvetica Neue';
+    /* Sets the weight of a font based on a integer value. Note: Normal text is 400, bold text is 700, the maximum is 900.*/
+    font-weight: 500;
+    /* Sets the font-size for all children of the head, body, and footer elements to their native browser size.*/
+    font-size: 1vw;
+    /*
+    text-rendering: optimizeLegibility;
+    
+    optimizeLegibility may seem like a property worth setting in your web page.
+    If you are modifying fonts in such a way that they are becoming unreadable,
+    then consider reducing the font's complexity over using the optimizeLegibility property.
+
+    What this really means. A Fast-Fourier Transform places pixels for text on the web page
+    instead of loading standard fonts. The result is a calculation that is horribly time consuming.
+    Especially for any device running ARM architecute (all smart phones). Recommend not using it at all,
+    but if want to measure the difference in load times. Use Google's API for monitoring web-page load
+    speeds with optimizeLegibility turned on and turned off. You will notice a significant difference,
+    and there is a good video explaining why this is the case website 3Blue1Brown: https://www.youtube.com/watch?v=spUNpyF58BY @
+    text-rendering: optimizeLegibility does not include color, size, and contrast settings.
+    It only calculates where to place pixels to allow people to see an image that is understood
+    as the character that is written based on information collected about the symbols properties.
+    There are Nlog2(N) calculations based on the number of symbols*sizes used for each symbol.
+    
+    optimizeSpeed is a property that loads the page over prioritizing how objects initially render on the page,
+    which is a property worth setting as it will create a quick sketch of the objects and fill in details.
+
+    Here is a link to compare and contrast the setting values.
+    https://static.bocoup.com/blog/wpt-text.png
+    Text-Rendering: OptimizeLegibility Is Decadent and Depraved - Design, Performance, Tools and Workflow - Bocoup. https://bocoup.com/blog/text-rendering. Accessed 17 Feb. 2019.
+    */
+    /*text-rendering: optimizeLegibility;*/
+    text-rendering: optimizeSpeed;
+    background-color: #fffdd0;
+    border-radius: 1em;
+    word-break: normal;
+    box-shadow: 0.1em 0.1em 0.2em 0.2em rgba(200, 200, 200, 0.8);
+}
+
+article {
+    background-color: ghostwhite;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+}
+
+button {
+    background-color: white;
+    text-align: center;
+    width: 10vw;
+    padding: 0.6vw;
+    margin: 1.5vw 1vw 0vw 1vw;
+    border-width: 0.3vw;
+    border-style: outset;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    outline: none;
+    font-size: 2vw;
+    color: inherit;
+}
+
+button:hover {
+    border-style: inset;
+}
+
+figcaption {
+    display: inline-flex;
+    width: auto;
+    vertical-align: top;
+    font-style: italic;
+    font-size: 2vw;
+    margin-top: 1vw;
+}
+
+figure {
+    width: 100%;
+    display: inline;
+    font-weight: 900;
+}
+
+footer {
+    padding: 0.1em;
+    font-size: 1vw;
+}
+
+header {
+    background-image: radial-gradient(ellipse at bottom center, orange, yellow, #409bc3, #409bc3, #409bc3);
+    border-radius: 1em;
+}
+
+h1 {
+    font-size: 35px;
+    margin: 0em;
+    padding: 1vw;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 0em;
+    padding: 0.8vw;
+}
+
+h3 {
+    font-size: 20px;
+    margin: 0em;
+    padding: 0.6vw;
+}
+
+h4 {
+    font-size: 15px;
+    margin: 0em;
+    padding: 0.4vw;
+}
+
+h5 {
+    font-size: 15px;
+    margin: 0em;
+    padding: 0.2vw;
+}
+
+h6 {
+    font-size: 10px;
+    margin: 0em;
+    padding: 0vw;
+}
+
+img {
+    display: inline-flex;
+    width: 20%;
+    height: auto;
+    vertical-align: top;
+    background-color: ghostwhite;
+    border-right-style: solid;
+    border-right-color: black;
+    border-right-width: 0.2vw;
+    border-top-right-radius: 1em;
+    padding: 2vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 1vw;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-bottom: none;
+    background: radial-gradient(ellipse at top center, yellow, lightgrey, grey, grey, grey, grey, grey, grey);
+}
+
+p {
+    font-size: 15px;
+    margin: 0em;
+    background-color: ghostwhite;
+}
+
+pre {
+    margin: 0em;
+    background-color: ghostwhite;
+}
+
+/* 	these are called class rules. in order for these to work you would
+        need to add the html attribute class="name of class rule" to the element
+        that you want to add the rule to. We do this when we want to add the
+        rules to some of the elements but not all of them. If i want to have my
+        image float to right i would need to add two classes to the figure
+        element, right and small (for float to work you need to have a width
+        for the box created). It would look like this:
+        <figure class="right small">
+*/
+
+.alignInput {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+.coverpic {
+    float: left;
+    margin-right: 1em;
+    width: 50%;
+    height: auto;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.coverimg{
+    max-width: 50%;
+    height: auto;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.col {
+    display: table-cell;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.form-heading {
+
+}
+highlight{
+    
+}
+.inline {
+    display: inline;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.left {
+    text-align: left;
+}
+NO-Highlight{
+    
+}
+.right {
+    text-align: right;
+}
+
+.textlink {
+    color: blue;
+}
+
+.textlink:hover {
+    color: orange;
+}
+
+.twocolcenter {
+    margin-left: 40%;
+    margin-right: 40%;
+    display: table;
+    width: 20%;
+}
+#comments {
+    vertical-align: top;
+}
 
