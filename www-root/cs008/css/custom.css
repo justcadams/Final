@@ -191,6 +191,9 @@ img {
     border-right-color: black;
     border-right-width: 0.2vw;
     border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-bottom-right-radius: 1em;
     padding: 2vw;
     margin-left: 2vw;
     margin-right: 2vw;
@@ -317,4 +320,9 @@ NO-Highlight{
 }
 .dropdown:hover .dropdown-content{
     display: block;
+}
+.center-footer{
+    background-color: ghostwhite;
+    border: none;
+    text-align: center;
 }

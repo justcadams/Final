@@ -121,7 +121,9 @@ button {
     border-width: 0.3vw;
     border-style: outset;
     border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-bottom-right-radius: 1em;
     outline: none;
     font-size: 2vw;
     color: inherit;
@@ -329,4 +331,9 @@ NO-Highlight{
 }
 .dropdown:hover .dropdown-content{
     display: block;
+}
+.center-footer{
+    background-color: ghostwhite;
+    border: none;
+    text-align: center;
 }
