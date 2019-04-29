@@ -67,7 +67,7 @@ body {
     The first font used is open-sans and the remaining fonts are "fallbacks" 
     should the user's browser not support the selected font.
     */
-    font-family:'Spectral', 'Helvetica', 'Oswald', 'sans-serif', 'open-sans', 'Tahoma', 'Helvetica Neue';
+    font-family:'Ariel','Spectral', 'Helvetica', 'Oswald', 'sans-serif', 'open-sans', 'Tahoma', 'Helvetica Neue';
     /* Sets the weight of a font based on a integer value. Note: Normal text is 400, bold text is 700, the maximum is 900.*/
     font-weight: 500;
     /* Sets the font-size for all children of the head, body, and footer elements to their native browser size.*/

@@ -20,7 +20,7 @@ else {
 <h4 class="bold italic">The Lumberjack - <p class="inline">$4.25</p></h4>
 <p>Egg, American Cheese, Hash Brown, Choice of Meat (Bacon, Ham, or Sausage) on an English Muffin.</p>
 <h4 class="bold italic">The Sassy Chicken Wrap - <p class="inline">$4.49</p></h4>
-Egg, Buffalo Chicken, Jalapeno, Ranch, Sirracha Sauce & Cheddar Cheese.
+<p>Egg, Buffalo Chicken, Jalapeno, Ranch, Sirracha Sauce & Cheddar Cheese.</p>
 <h4 class="bold italic">Western Omelet Wrap - <p class="inline">$4.49</p></h4>
 <p>Black Forest Ham, Onion, Green Pepper, American Cheese, & Egg.</p>
 <h4 class="bold italic">Sirracha Breakfast Wrap - <p class="inline">$4.99</p></h4>

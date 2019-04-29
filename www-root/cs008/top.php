@@ -21,7 +21,7 @@ include 'head.php';
 print PHP_EOL;
 
 // Set working directory to a known location, which is the root directory.
-chdir('/users/j/a/jadams7/www-root/cs008/final');
+chdir('/users/e/k/ekloeti/www-root/cs008/final');
 
 // Javascript dependencies go here.
 
@@ -85,14 +85,22 @@ if(($parentFolder == 'final') && ($fileName == 'order')) {
 
 	print PHP_EOL . '<!--############################################## End of top.php #############################################-->' . PHP_EOL;
 }
-else if(($parentFolder == 'final') && ($fileName == 'style1')) {
+else if(($parentFolder == 'final') && ($fileName == 'nightowl')) {
 	print PHP_EOL . '<link rel="stylesheet" href="css/style1.css">' . PHP_EOL;
+	print PHP_EOL . '</head>' . PHP_EOL;
+	require 'nav.php';
 }
-else if(($parentFolder == 'final') && ($fileName == 'style2')) {
+else if(($parentFolder == 'final') && ($fileName == 'earlybird')) {
 	print PHP_EOL . '<link rel="stylesheet" href="css/style2.css">' . PHP_EOL;
+	print PHP_EOL . '</head>' . PHP_EOL;
+	require 'nav.php';
+
 }
-else if(($parentFolder == 'final') && ($fileName == 'style3')) {
+else if(($parentFolder == 'final') && ($fileName == 'imparedsight')) {
 	print PHP_EOL . '<link rel="stylesheet" href="css/style3.css">' . PHP_EOL;
+	print PHP_EOL . '</head>' . PHP_EOL;
+	require 'nav.php';
+
 }
 else {
 
