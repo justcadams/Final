@@ -55,11 +55,12 @@ html {
     within the border of the html element on the bottom of the page.
     */
     padding-bottom: 5%;
+    background-color: lightslategray;
 }
 
 body {
     /* Sets the color of text within the head, body, and footer to a specific hex value.*/
-    color: black;
+    color: darkslateblues;
     /* Sets the mouse cursor within the head, body, and footer class to the system default cursor.*/
     cursor: default;
     /*
@@ -67,7 +68,7 @@ body {
     The first font used is open-sans and the remaining fonts are "fallbacks" 
     should the user's browser not support the selected font.
     */
-    font-family:'Spectral', 'Helvetica', 'Oswald', 'sans-serif', 'open-sans', 'Tahoma', 'Helvetica Neue';
+    font-family:'Garamond', 'Helvetica', 'Oswald', 'sans-serif', 'open-sans', 'Tahoma', 'Helvetica Neue';
     /* Sets the weight of a font based on a integer value. Note: Normal text is 400, bold text is 700, the maximum is 900.*/
     font-weight: 500;
     /* Sets the font-size for all children of the head, body, and footer elements to their native browser size.*/
@@ -113,7 +114,7 @@ article {
 }
 
 button {
-    background-color: white;
+    background-color: lightgrey;
     text-align: center;
     width: 10vw;
     padding: 0.6vw;
@@ -152,7 +153,7 @@ footer {
 }
 
 header {
-    background-image: radial-gradient(ellipse at bottom center, orange, yellow, #409bc3, #409bc3, #409bc3);
+    background-image: radial-gradient(ellipse at bottom center, red,orange, yellow, skyblue,skyblue,skyblue,skyblue);
     border-radius: 1em;
 }
 
@@ -214,8 +215,8 @@ nav {
     align-content: center;
     justify-content: center;
     border-bottom: none;
-    background: radial-gradient(ellipse at top center, yellow, lightgrey, grey, grey, grey, grey, grey, grey);
-}
+    /*background: radial-gradient(ellipse at top center, yellow, lightgrey, grey, grey, grey, grey, grey, grey);
+*/}
 
 p {
     font-size: 15px;
@@ -328,7 +329,4 @@ NO-Highlight{
 }
 .dropdown:hover .dropdown-content{
     display: block;
-}
-a{
-    font-size: 3vw;
 }
