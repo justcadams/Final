@@ -321,6 +321,9 @@ NO-Highlight{
 #comments {
     vertical-align: top;
 }
+/*Source for dropdown css developed from W3 template
+How To Create a Hoverable Dropdown Menu. https://www.w3schools.com/howto/howto_css_dropdown.asp. Accessed 1 May 2019.
+*/
 .dropdown{
     position: relative;
     display: inline-block;
