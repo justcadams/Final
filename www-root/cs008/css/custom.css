@@ -190,6 +190,7 @@ img {
     border-right-style: solid;
     border-right-color: black;
     border-right-width: 0.2vw;
+    border-left-width: 0.2vw;
     border-top-right-radius: 1em;
     border-top-left-radius: 1em;
     border-bottom-right-radius: 1em;
@@ -280,10 +281,9 @@ pre {
 .form-heading {
 
 }
-highlight{
 
 .highlight {
-    
+    color: red;
 }
 
 .inline {
@@ -299,7 +299,7 @@ highlight{
 }
 
 .noHighlight {
-    
+    color: black;
 }
 
 .right {
