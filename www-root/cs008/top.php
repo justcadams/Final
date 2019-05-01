@@ -1,7 +1,7 @@
 <?php
 // Update cookies and temp files every time the page is loaded.
-ob_start();
-session_start();
+// ob_start();
+// session_start();
 // Retrieves the current html document object model from the server.
 $phpSelf = htmlentities($_SERVER['PHP_SELF'], ENT_QUOTES, "UTF-8");
 // Obtains the path, filename, and extension of the current file

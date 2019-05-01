@@ -9,7 +9,7 @@
 </figure>
 <nav>
 	<h2 hidden>Navigation</h2>
-		<button class="navigation"><a href="home.php" class="button round">Home<h3 hidden>Home</h3></a></button>
+		<button class="navigation dropdown"><a href="home.php" class="button round">Home<h3 hidden>Home</h3></a></button>
                 
                 <object class ="dropdown">
                     <button class="dropbtn">Menu</button>
