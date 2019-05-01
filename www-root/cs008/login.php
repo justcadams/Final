@@ -26,24 +26,25 @@
             ?>
         </div>
         <div class = "container center">
-        <form class = "form-signin" action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method = "post">
-            <h4 class = "form-signin-heading"><?php echo $msg; ?>&nbsp;</h4>
-            <label class = "alignInput <?php if($usernameERROR) print $highlight; else print $noHighlight; ?>" id="usernameLabel">Username:</label>
-            <input type = "text" class = "form-control <?php if($usernameERROR) print $highlight; else print $noHighlight; ?>" name = "username" placeholder = "username" required autofocus><br>
-            <label class = "alignInput" id="passwordLabel <?php if($passwordERROR) print $highlight; else print $noHighlight; ?>">Password:</label>
-            <input type = "password" class = "form-control <?php if($passwordERROR) print $highlight; else print $noHighlight; ?>" name = "password" placeholder = "password" required><br>
-            <button class = "btn btn-lg btn-primary btn-block" type = "submit" name = "login">Login</button>
-         </form>            
+            <form class = "form-signin" action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method = "post">
+                <h4 class = "form-signin-heading"><?php echo $msg; ?>&nbsp;</h4>
+                <label class = "float left alignInput <?php if($usernameERROR) print $highlight; else print $noHighlight; ?>" id="usernameLabel">Username:</label>
+                <input type = "text" class = "form-control <?php if($usernameERROR) print $highlight; else print $noHighlight; ?>" name = "username" placeholder = "username" required autofocus><br>
+                <label class = "alignInput" id="passwordLabel <?php if($passwordERROR) print $highlight; else print $noHighlight; ?>">Password:</label>
+                <input type = "password" class = "form-control <?php if($passwordERROR) print $highlight; else print $noHighlight; ?>" name = "password" placeholder = "password" required><br>
+                <button class = "btn btn-lg btn-primary btn-block" type = "submit" name = "login">Login</button>
+            </form>
         </div>
-            <div class="container center">
-                <span class="uname"><a href="#Recover-Username.php">Forgot username?</a></span>
-            </div>
-            <div class="container center">
-                <span class="psw"><a href="#Recover-Password.php">Forgot password?</a></span>
-            </div>
-            <div class="container center">
-                <h6 hidden>Click here to <a href = "logout.php" title = "Logout" class="center">logout.</a></h6>
-            </div>
-        <h2 class="center">Viridian G.P. &copy; 21 January 2019</h2>
+        <span class="center">
+            <button class="inline" id="forgotUsername">
+                <span class="uname"><a href="#Recover-Username.php">Forgot Username</a></span>
+            </button>
+            <button class="inline" id="forgotPassword">
+                <span class="psw"><a href="#Recover-Password.php">Forgot Password</a></span>
+            </button>
+            <section hidden class="flex button" id="logout">
+                <h6 hidden class="logout">Logout</h6>
+            </section>
+        </span>
     </main>
-<?php include 'footer.php';?>
+<?php require 'footer.php';?>
