@@ -1,6 +1,6 @@
 <?php 
 $currentDirectory = getcwd();
-if($currentDirectory != '/users/e/k/ekloeti/www-root/cs008/final') {
+if($currentDirectory != '//users/e/k/ekloeti/www-root/cs008/final') {
 	chdir('/users/e/k/ekloeti/www-root/cs008/final');
 	require 'top.php';
 }
@@ -40,11 +40,11 @@ else {
 
 <h3>Lunch Specials</h3>
 <h3>Salads</h3>
-<h4 class="bold italic">Garden Salad - <p class="inline">$5.95</p></h4>
+<h4 class="bold italic">Garden Salad <p class="inline">$5.95</p></h4>
 <p>(Fresh Greens, Tomatoes, Onions, Peppers, Cucumbers, Carrots).</p>
-<h4 class="bold italic">Chef Salad - <p class="inline">$7.95</p></h4>
+<h4 class="bold italic">Chef Salad <p class="inline">$7.95</p></h4>
 <p>(Garden Salad with Ham, Turkey, Egg, and Swiss Cheese).</p>
-<h4 class="bold italic">Buffalo Chicken Caeser - <p class="inline">$7.95</p></h4>
+<h4 class="bold italic">Buffalo Chicken Caeser <p class="inline">$7.95</p></h4>
 <p>(Fresh Greens, Parmesan Cheese, Breaded Buffalo Chicken, Bacon)</p>
 
 <h3>Soups</h3>
@@ -60,9 +60,9 @@ Call to find out our specials.</p>
 
 <h3>Specialty Sandwiches</h3>
 <h5 class="twocolcenter bold italic"><p class="col">Small $5.99</p><p class="col">Large $8.99</p></h5>
-<h4 class="bold inline">Italian - </h4><p class="inline"><br>Ham, Salami, Capicola, Provolone Cheese, Italian Dressing, and your choice of vegetables.</p><br>
-<h4 class="bold inline">BLT - </h4><p class="inline"><br>Bacon, Lettuce, Tomato, Mayonnaise.</p><br>
-<h4 class="bold inline">Hot Pastrami - </h4><p class="inline"><br>Mustard, Swiss Cheese, Lean Pastrami Heated to Perfection!</p><br>
+<h4 class="bold inline">Italian - </h4><p class="inline">Ham, Salami, Capicola, Provolone Cheese, Italian Dressing, and your choice of vegetables.</p><br>
+<h4 class="bold inline">BLT - </h4><p class="inline">Bacon, Lettuce, Tomato, Mayonnaise.</p><br>
+<h4 class="bold inline">Hot Pastrami - </h4><p class="inline">Mustard, Swiss Cheese, Lean Pastrami Heated to Perfection!</p><br>
 
 <h3>Veggie Sandwich</h3>
 <h5 class="twocolcenter bold italic"><p class="col">Small $4.99</p><p class="col">Large $7.99</p></h5>

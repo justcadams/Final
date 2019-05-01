@@ -15,21 +15,21 @@ else {
 <h2 class="italic">Ask to join our e-mail list in store or <a href="newsletter.php">sign up</a> on the newsletter page.</h2>
 
 <h3>Breakfast Sandwiches</h3>
-<h4 class="bold italic">The Little John<p class="inline">$6.99</p></h4>
+<h4 class="bold italic">The Little John - <p class="inline">$6.99</p></h4>
 <p>Ham, Bacon, Sausage, 2 Eggs, Cheese, Hash Brown, and Sirracha Sauce on a Large Ciabatta.</p>
-<h4 class="bold italic">The Lumberjack <p class="inline">$4.25</p></h4>
+<h4 class="bold italic">The Lumberjack - <p class="inline">$4.25</p></h4>
 <p>Egg, American Cheese, Hash Brown, Choice of Meat (Bacon, Ham, or Sausage) on an English Muffin.</p>
-<h4 class="bold italic">The Sassy Chicken Wrap <p class="inline">$4.49</p></h4>
+<h4 class="bold italic">The Sassy Chicken Wrap - <p class="inline">$4.49</p></h4>
 <p>Egg, Buffalo Chicken, Jalapeno, Ranch, Sirracha Sauce & Cheddar Cheese.</p>
-<h4 class="bold italic">Western Omelet Wrap <p class="inline">$4.49</p></h4>
+<h4 class="bold italic">Western Omelet Wrap - <p class="inline">$4.49</p></h4>
 <p>Black Forest Ham, Onion, Green Pepper, American Cheese, & Egg.</p>
-<h4 class="bold italic">Sirracha Breakfast Wrap <p class="inline">$4.99</p></h4>
+<h4 class="bold italic">Sirracha Breakfast Wrap - <p class="inline">$4.99</p></h4>
 <p>Sausage, Bacon, Broccoli, Tomato, American Cheese, & Egg.</p>
-<h4 class="bold italic">The JC Veggie Special Breakfast Wrap <p class="inline">$4.49</p></h4>
+<h4 class="bold italic">The JC Veggie Special Breakfast Wrap - <p class="inline">$4.49</p></h4>
 <p>Black Beans, Salsa, Onion, Tomato, American Cheese, & Egg.</p>
-<h4 class="bold italic">Steak Egg & Cheese <p class="inline">$4.99</p></h4>
+<h4 class="bold italic">Steak Egg & Cheese - <p class="inline">$4.99</p></h4>
 <p>Seasoned Shaved Steak, Cheddar Cheese, American Cheese, Fried Egg on a Ciabatta Roll.</p>
-<h4 class="bold italic">Pastrami Reuben Breakfast Wrap <p class="inline">$4.49</p></h4>
+<h4 class="bold italic">Pastrami Reuben Breakfast Wrap - <p class="inline">$4.49</p></h4>
 <p>Pastrami, Sauerkraut, Swiss Cheese, Thousand Island Dressing.</p>
 <h4 class="bold italic">Make Your Own Sunrise Sandwich</h4>
 <h4 class="bold">Meats: Bacon, Ham, Pastrami, Sausage, Steak, Buffalo Chicken, Egg, Double Egg</h4>

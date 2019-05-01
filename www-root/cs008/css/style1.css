@@ -122,8 +122,6 @@ button {
     border-style: outset;
     border-top-left-radius: 1em;
     border-top-right-radius: 1em;
-    border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em;
     outline: none;
     font-size: 2vw;
     color: inherit;
@@ -151,6 +149,9 @@ figure {
 footer {
     padding: 0.1em;
     font-size: 1vw;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    background-color: ghostwhite;
 }
 
 header {
@@ -204,6 +205,7 @@ img {
     border-right-color: black;
     border-right-width: 0.2vw;
     border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
     padding: 2vw;
     margin-left: 2vw;
     margin-right: 2vw;
@@ -275,7 +277,6 @@ pre {
 .col {
     display: table-cell;
 }
-
 .float-left {
     float: left;
 }
@@ -300,6 +301,12 @@ highlight{
 
 .left {
     text-align: left;
+}
+.logo{
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
 }
 NO-Highlight{
     
@@ -327,7 +334,7 @@ NO-Highlight{
 }
 .dropdown{
     position: relative;
-    display: inline-block
+    display: inline-block;
 }
 .dropdown:hover .dropdown-content{
     display: block;
@@ -336,4 +343,41 @@ NO-Highlight{
     background-color: ghostwhite;
     border: none;
     text-align: center;
+}
+.dropbtn{
+    width: 10vw;
+    background-color: white;
+    text-align: center;
+    margin: 1.5vw 1vw 0vw 1vw;
+    border-width: 0.3vw;
+    border-style: outset;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    outline: none;
+    color: inherit;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: grey;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center;
+    font-size: 1.7vw;
+    margin: 0vw 1vw 0vw 1vw;
+    width: 10vw;
+}
+.dropdown-content a{
+    display: block;
+    padding: 0.5vw;
+    text-decoration: none;
+}
+.dropbtn:hover .dropdown-content{
+    display: block;
+}
+.dropdown-content a:hover{
+    background-color: white; 
+}
+.dropdown:hover .dropbtn{
+    background-color: white;
 }
