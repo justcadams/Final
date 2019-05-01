@@ -347,7 +347,7 @@ NO-Highlight{
 }
 .dropbtn{
     width: 10vw;
-    background-color: white;
+    background-color: lightgray;
     text-align: center;
     margin: 1.5vw 1vw 0vw 1vw;
     border-width: 0.3vw;
@@ -380,5 +380,5 @@ NO-Highlight{
     background-color: white; 
 }
 .dropdown:hover .dropbtn{
-    background-color: white;
+    background-color: ghostwhite;
 }

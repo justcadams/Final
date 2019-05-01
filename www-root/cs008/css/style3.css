@@ -336,7 +336,7 @@ NO-Highlight{
     vertical-align: top;
 }
 a{
-    font-size: 3vw;
+    font-size: 2vw;
 }
 .dropdown{
     position: relative;
@@ -352,7 +352,7 @@ a{
 }
 .dropbtn{
     width: 10vw;
-    background-color: lightgray;
+    background-color: white;
     text-align: center;
     margin: 1.5vw 1vw 0vw 1vw;
     border-width: 0.3vw;
@@ -382,7 +382,7 @@ a{
     display: block;
 }
 .dropdown-content a:hover{
-    background-color: lightgray; 
+    background-color: white; 
 }
 .dropdown:hover .dropbtn{
     background-color: lightgray;
