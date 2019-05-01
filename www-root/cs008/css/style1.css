@@ -332,6 +332,16 @@ NO-Highlight{
 #comments {
     vertical-align: top;
 }
+.center-footer{
+    background-color: ghostwhite;
+    border: none;
+    text-align: center;
+}
+/*
+The following lines are related to have the drop down menu work and allows for colors,padding,size,alignment,margins,borders,colors,etc.. of the drop down menu
+
+the following code enables for the drop down menu to drop down and go into other boxes
+*/
 .dropdown{
     position: relative;
     display: inline-block;
@@ -339,11 +349,9 @@ NO-Highlight{
 .dropdown:hover .dropdown-content{
     display: block;
 }
-.center-footer{
-    background-color: ghostwhite;
-    border: none;
-    text-align: center;
-}
+/*
+the following code designs the actual "menu" button and makes sure it looks good and follows the style of all menus
+*/
 .dropbtn{
     width: 10vw;
     background-color: white;
@@ -356,6 +364,11 @@ NO-Highlight{
     outline: none;
     color: inherit;
 }
+/*
+the following code allows for the customization of the buttons that bring the user to other menu sites.
+this code lets you change the font of the buttons, the color, the z-index, the shadow, and places the content within the button
+over all the other boxes. Allowing for text to not overlap the drop down menu
+*/
 .dropdown-content{
     display: none;
     position: absolute;
@@ -367,6 +380,10 @@ NO-Highlight{
     margin: 0vw 1vw 0vw 1vw;
     width: 10vw;
 }
+/*
+the following code allows the coder to change the highlight of the buttons and the padding. as well as change what color shows up when the user
+hovers over the main "Menu" button
+*/
 .dropdown-content a{
     display: block;
     padding: 0.5vw;
