@@ -100,7 +100,6 @@ article {
     padding-right: 10%;
     text-align: center;
 }
-
 button {
     background-color: white;
     text-align: center;
@@ -138,6 +137,9 @@ figure {
 footer {
     padding: 0.1em;
     font-size: 1vw;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    background-color: ghostwhite;
 }
 
 header {
@@ -193,8 +195,6 @@ img {
     border-left-width: 0.2vw;
     border-top-right-radius: 1em;
     border-top-left-radius: 1em;
-    border-bottom-right-radius: 1em;
-    border-bottom-left-radius: 1em;
     padding: 2vw;
     margin-left: 2vw;
     margin-right: 2vw;
@@ -209,7 +209,6 @@ nav {
     border-bottom: none;
     background: radial-gradient(ellipse at top center,lightgrey, grey, grey);
 }
-
 p {
     font-size: 15px;
     margin: 0em;
@@ -297,7 +296,14 @@ pre {
 .left {
     text-align: left;
 }
-
+.logo{
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    background-color: white;
+}
+    
 .noHighlight {
     color: black;
 }
@@ -323,9 +329,12 @@ pre {
 #comments {
     vertical-align: top;
 }
+/*Source for dropdown css developed from W3 template
+How To Create a Hoverable Dropdown Menu. https://www.w3schools.com/howto/howto_css_dropdown.asp. Accessed 1 May 2019.
+*/
 .dropdown{
     position: relative;
-    display: inline-block
+    display: inline-block;
 }
 .dropdown:hover .dropdown-content{
     display: block;
@@ -335,40 +344,40 @@ pre {
     border: none;
     text-align: center;
 }
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+.dropbtn{
+    width: 10vw;
+    background-color: white;
+    text-align: center;
+    margin: 1.5vw 1vw 0vw 1vw;
+    border-width: 0.3vw;
+    border-style: outset;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    outline: none;
+    color: inherit;
 }
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: lightblue;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center;
+    font-size: 1.7vw;
+    margin: 0vw 1vw 0vw 1vw;
+    width: 10vw;
 }
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-	background-color: #ddd;
+.dropdown-content a{
+    display: block;
+    padding: 0.5vw;
+    text-decoration: none;
 }
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+.dropbtn:hover .dropdown-content{
     display: block;
 }
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+.dropdown-content a:hover{
+    background-color: white; 
 }
-
-#comments {
-    vertical-align: top;
+.dropdown:hover .dropbtn{
+    background-color: white;
 }
