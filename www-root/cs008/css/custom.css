@@ -265,10 +265,7 @@ pre {
 .col {
     display: table-cell;
 }
-.dropitem{
-    background-color: ghostwhite;
-    width: auto;
-}
+
 .float-left {
     float: left;
 }
@@ -326,7 +323,7 @@ NO-Highlight{
 }
 .dropdown{
     position: relative;
-    display: inline-block
+    display: inline-block;
 }
 .dropdown:hover .dropdown-content{
     display: block;
@@ -335,4 +332,25 @@ NO-Highlight{
     background-color: ghostwhite;
     border: none;
     text-align: center;
+}
+.dropbtn{
+    background-color: ghostwhite;
+    width: auto;
+    border: none;
+}
+.dropdown-content{
+    display: none;
+    position: relative;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a{
+    display: block;
+    text-decoration: none;
+}
+.dropdown-content a:hover{
+    background-color: ghostwhite;
+}
+.dropdown:hover .dropbtn{
+    background-color: ghostwhite;
 }

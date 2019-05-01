@@ -11,14 +11,15 @@
 	<h2 hidden>Navigation</h2>
 		<button class="navigation"><a href="home.php" class="button round">Home<h3 hidden>Home</h3></a></button>
                 
-		<button class="navigation"><a href="menu.php" class="button round">Menu<h3 hidden>Menu</h3></a>
-                    <object class="dropdown">
-                        <a class="dropdown-content" href="menu.php">Standard</a>
-                        <a class="dropdown-content" href="nightowl.php">Night Owl</a>
-                        <a class="dropdown-content" href="earlybird.php">Early Bird</a>
-                        <a class="dropdown-content" href="imparedsight.php">Reduced Vision</a>
-                    </object>
-                </button>
+                <object class ="dropdown">
+                    <button class="dropbtn">Menu</button>
+                    <object class="dropdown-content">
+                        <a  href="menu.php">Standard</a>
+                        <a  href="nightowl.php">Night Owl</a>
+                        <a  href="earlybird.php">Early Bird</a>
+                        <a  href="imparedsight.php">Reduced Vision</a>
+                </object>
+                </object>
                 
 		<button class="navigation"><a href="login.php" class="button round">Order<h3 hidden>Order</h3></a></button>
 		<button class="navigation"><a href="contact.php" class="button round">Contact<h3 hidden>Contact</h3></a></button>
