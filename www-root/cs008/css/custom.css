@@ -100,7 +100,6 @@ article {
     padding-right: 10%;
     text-align: center;
 }
-
 button {
     background-color: white;
     text-align: center;
@@ -209,7 +208,6 @@ nav {
     border-bottom: none;
     background: radial-gradient(ellipse at top center,lightgrey, grey, grey);
 }
-
 p {
     font-size: 15px;
     margin: 0em;
@@ -296,6 +294,7 @@ highlight{
     border-top-left-radius: 1em;
     border-bottom-right-radius: 1em;
     border-bottom-left-radius: 1em;
+    background-color: white;
 }
 NO-Highlight{
     
@@ -337,23 +336,39 @@ How To Create a Hoverable Dropdown Menu. https://www.w3schools.com/howto/howto_c
     text-align: center;
 }
 .dropbtn{
-    background-color: ghostwhite;
-    width: auto;
-    border: none;
+    width: 10vw;
+    background-color: white;
+    text-align: center;
+    margin: 1.5vw 1vw 0vw 1vw;
+    border-width: 0.3vw;
+    border-style: outset;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    outline: none;
+    color: inherit;
 }
 .dropdown-content{
     display: none;
-    position: relative;
+    position: absolute;
+    background-color: lightblue;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    text-align: center;
+    font-size: 1.7vw;
+    margin: 0vw 1vw 0vw 1vw;
+    width: 10vw;
 }
 .dropdown-content a{
     display: block;
+    padding: 0.5vw;
     text-decoration: none;
 }
+.dropbtn:hover .dropdown-content{
+    display: block;
+}
 .dropdown-content a:hover{
-    background-color: ghostwhite;
+    background-color: white; 
 }
 .dropdown:hover .dropbtn{
-    background-color: ghostwhite;
+    background-color: white;
 }

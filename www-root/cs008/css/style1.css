@@ -277,10 +277,6 @@ pre {
 .col {
     display: table-cell;
 }
-.dropitem{
-    background-color: ghostwhite;
-    width: auto;
-}
 .float-left {
     float: left;
 }
@@ -338,7 +334,7 @@ NO-Highlight{
 }
 .dropdown{
     position: relative;
-    display: inline-block
+    display: inline-block;
 }
 .dropdown:hover .dropdown-content{
     display: block;
@@ -347,4 +343,41 @@ NO-Highlight{
     background-color: ghostwhite;
     border: none;
     text-align: center;
+}
+.dropbtn{
+    width: 10vw;
+    background-color: white;
+    text-align: center;
+    margin: 1.5vw 1vw 0vw 1vw;
+    border-width: 0.3vw;
+    border-style: outset;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    outline: none;
+    color: inherit;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: darkslateblue;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center;
+    font-size: 1.7vw;
+    margin: 0vw 1vw 0vw 1vw;
+    width: 10vw;
+}
+.dropdown-content a{
+    display: block;
+    padding: 0.5vw;
+    text-decoration: none;
+}
+.dropbtn:hover .dropdown-content{
+    display: block;
+}
+.dropdown-content a:hover{
+    background-color: white; 
+}
+.dropdown:hover .dropbtn{
+    background-color: white;
 }
